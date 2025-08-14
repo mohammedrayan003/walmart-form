@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Coverage Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0071ce;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <img src="img.jpg" alt="Walmart Logo">
+    <h2>Hello, Welcome to Walmart</h2>
+    <form>
+        <label>Please enter your WIN:</label>
+        <input type="text" name="win" required>
+
+        <label>Please select the year for which coverage details are needed:</label>
+        <select name="year" required>
+            <option value="">-- Select Year --</option>
+            <!-- Years from 1980 to 2025 -->
+            <script>
+                for (let year = 1980; year <= 2025; year++) {
+                    document.write(`<option value="${year}">${year}</option>`);
+                }
+            </script>
+        </select>
+
+        <label>Please enter your name:</label>
+        <input type="text" name="name" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
